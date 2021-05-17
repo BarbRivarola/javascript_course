@@ -251,16 +251,23 @@ footer div span a:hover {
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    @media (min-width: 992px) {
+      .tipos__cursos div {
+        height: 70vh;
+        width: 20px; } }
     .tipos__cursos div h4 {
+      font-size: 1.2rem;
       font-family: "Paytone One";
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      margin-top: 10px; }
   .tipos__cursos div:hover {
     background-color: #ffa500;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
 .tipos__cursos div img {
-  width: 35%;
-  text-align: center; }
+  width: 40%;
+  text-align: center;
+  margin-top: 10px; }
   @media (max-width: 768px) {
     .tipos__cursos div img {
       display: none; } }
@@ -268,26 +275,44 @@ footer div span a:hover {
 .valores {
   background-color: #fff8dc;
   padding-top: 15px;
-  align-content: center; }
+  align-content: center;
+  margin: 0; }
+  @media (min-width: 768px) {
+    .valores {
+      display: flex;
+      flex-direction: row; } }
   .valores h3 {
-    background-color: rgba(50, 205, 50, 0.612);
     font-family: "Paytone One";
-    width: 30%;
-    height: 30%;
-    border-radius: 100%;
-    margin-left: 5%;
+    font-size: 2rem;
     align-content: center;
     text-align: center; }
+    @media (min-width: 768px) {
+      .valores h3 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 3rem; } }
   .valores .table {
+    margin-top: 10px;
     background-color: rgba(50, 205, 50, 0.612);
     padding: 0;
+    font-size: larger;
     display: flex;
     align-items: center;
     justify-content: center; }
 
 /* PREGUNTAS */
 .prop__preguntas {
-  background-image: url(../img/PREGUNTAS.jpg); }
+  background-image: url(../img/PREGUNTAS.jpg);
+  /*& button {
+        
+    }*/ }
+  .prop__preguntas span {
+    height: 300px;
+    text-align: center; }
+    @media (max-width: 768px) {
+      .prop__preguntas span {
+        height: 100px; } }
 
 .accordion {
   font-family: 'Quicksand', sans-serif;
@@ -311,7 +336,7 @@ footer div span a:hover {
 
 /* RECURSOS ESTUDIANTES */
 .prop__est {
-  background-image: url(../img/Recursos_est.jpg); }
+  background-image: url(../img/ESTUDIANTES.png); }
 
 @media (max-width: 768px) {
   .videos {
@@ -323,7 +348,7 @@ footer div span a:hover {
   .consejos .consejos__titulo {
     font-family: "Paytone One";
     font-size: 200%;
-    text-align: justify; }
+    text-align: center; }
     @media (min-width: 768px) {
       .consejos .consejos__titulo {
         font-size: 300%; } }
@@ -372,7 +397,7 @@ footer div span a:hover {
 
 /* RECURSOS PROF*/
 .prop__prof {
-  background-image: url(../img/Recursos_prof.jpg); }
+  background-image: url(../img/PROFESORES.jpg); }
 
 /** CONTACTO**/
 .contacto {
