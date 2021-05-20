@@ -109,7 +109,7 @@ $box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
 .prop {
     min-height: 35vh;
-    background-image: url(../img/INDEX.jpg);
+    background-image: url(../img_webp/index.webp);
     background-size: 100%;
     background-repeat:no-repeat;
     @media (min-width: 768px) {
@@ -284,7 +284,7 @@ footer div span a:hover {
 /* PROPUESTAS */
 
 .prop__propuestas {
-    background-image: url(../img/PROPUESTAS.jpg);
+    background-image: url(../img_webp/proposals.webp);
     & button {
         width: 8rem;
         @media (min-width: 768px){
@@ -375,7 +375,7 @@ footer div span a:hover {
 
 
 .prop__preguntas {
-    background-image: url(../img/PREGUNTAS.jpg);
+    background-image: url(../img_webp/questions.webp);
     & span {
         height: 300px;
         text-align: center;
@@ -415,7 +415,7 @@ footer div span a:hover {
 /* RECURSOS ESTUDIANTES */
 
 .prop__est {
-    background-image: url(../img/ESTUDIANTES.png)
+    background-image: url(../img_webp/students.webp)
 }
 .videos {
     @media (max-width: 768px) {
@@ -469,6 +469,9 @@ footer div span a:hover {
         & li {
             list-style: none;
         }
+        & p{
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -485,7 +488,7 @@ footer div span a:hover {
 /* RECURSOS PROF*/ 
 
 .prop__prof {
-    background-image: url(../img/PROFESORES.jpg);
+    background-image: url(../img_webp/teachers.webp);
 }
 
 /** CONTACTO**/
