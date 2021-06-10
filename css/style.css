@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+/*-- font-family: 'Paytone One', sans-serif; --*/
+@import url("https://fonts.googleapis.com/css2?family=Chango&family=Paytone+One&family=Quicksand:wght@300&display=swap");
+/*-- font-family: 'Quicksand', sans-serif; --*/
+/* VARIABLES */
+/* reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand"; }
+
+/* NAVBAR pisando bootstrap */
+.navbar, .navbar-expand-lg, .navbar-light {
+  text-transform: uppercase;
+  display: flex;
+  background-color: #ffa500; }
+
+.btn-outline-success {
+  color: #8100eb;
+  border-color: #8100eb; }
+
+.dropdown-menu {
+  background-color: #ffa500; }
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #16181b;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #ffa500; }
+
+/*index*/
+.header__main {
+  font-family: "Quicksand";
+  font-weight: bolder; }
+
+.titles {
+  background-color: #fff8dc;
+  padding: 3rem;
+  display: inline-flex; }
+  @media (min-width: 768px) {
+    .titles {
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
+  .titles img {
+    height: 300px;
+    width: 300px; }
+    @media (max-width: 768px) {
+      .titles img {
+        width: 80px;
+        height: 80px; } }
+  .titles .titles__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .titles .titles__text h1 {
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: bolder; }
+      @media (min-width: 768px) {
+        .titles .titles__text h1 {
+          font-size: 5rem; } }
+    @media (max-width: 768px) {
+      .titles .titles__text h2 {
+        font-size: 1rem; } }
+
+.prop {
+  min-height: 35vh;
+  background-image: url(../img_webp/index.webp);
+  background-size: 100%;
+  background-repeat: no-repeat; }
+  @media (min-width: 768px) {
+    .prop {
+      height: 50vh; } }
+  @media (min-width: 992px) {
+    .prop {
+      height: 100vh; } }
+  .prop span {
+    background-color: #ffa5009c;
+    font-family: "Paytone One";
+    font-size: 1rem;
+    width: 17rem;
+    height: 15vh;
+    padding: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px; }
+    @media (min-width: 768px) {
+      .prop span {
+        font-size: 2rem;
+        width: 30rem;
+        height: 35vh;
+        padding: 10px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center; } }
+    @media (min-width: 992px) {
+      .prop span {
+        height: 60vh;
+        font-size: 3rem; } }
+  .prop button {
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 6.5rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-top: 3rem;
+    margin-right: 11rem;
+    margin-left: 3rem;
+    transition: transform 1s; }
+    @media (min-width: 768px) {
+      .prop button {
+        width: 12rem;
+        height: 4rem;
+        font-size: 1.5rem;
+        margin-top: 5px; } }
+  .prop a {
+    text-decoration: none; }
+  .prop button:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.features {
+  background-color: #fff8dc;
+  margin: 0; }
+  .features p {
+    text-align: justify; }
+  @media (min-width: 768px) {
+    .features p {
+      font-size: 2rem; }
+    .features h3 {
+      font-size: 2.5rem; } }
+  .features .img1, .features .img2, .features .img3 {
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .features img {
+    width: 250px;
+    height: 150px;
+    border-radius: 15%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+    @media (min-width: 768px) {
+      .features img {
+        width: 320px;
+        height: 250px; } }
+  .features .features__01 .features__01__text h3, .features .features__02 .features__02__text h3, .features .features__03 .features__03__text h3 {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bolder; }
+
+footer {
+  background-color: #6b35ff; }
+  footer .contactame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 4rem;
+    font-family: 'Paytone One', sans-serif;
+    padding: 4.5rem;
+    height: 12rem;
+    width: 100%; }
+  footer img {
+    height: 100px;
+    border-radius: 100%;
+    margin-top: 5px; }
+
+.contactame button {
+  height: 3rem;
+  width: 6rem;
+  font-size: 1rem;
+  background-color: orange;
+  color: black;
+  border: none;
+  border-radius: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.contactame button a {
+  text-decoration: none;
+  color: black; }
+
+footer .contactame a {
+  text-decoration: none; }
+
+footer.contactame a button {
+  font-size: 0.5rem;
+  background-color: orange;
+  color: black;
+  border: none;
+  border-radius: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+footer .contactame button:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+footer div span {
+  font-family: 'Quicksand', sans-serif;
+  color: cornsilk; }
+
+footer div span a {
+  text-decoration: none;
+  color: cornsilk; }
+
+footer div span a:hover {
+  color: orange; }
+
+/* PROPUESTAS */
+.prop__propuestas {
+  background-image: url(../img_webp/proposals.webp); }
+  .prop__propuestas button {
+    width: 8rem; }
+    @media (min-width: 768px) {
+      .prop__propuestas button {
+        width: 12.5rem; } }
+  .prop__propuestas span {
+    margin-left: 20px; }
+
+.tipos__cursos {
+  background-color: #fff8dc;
+  margin: 0; }
+  .tipos__cursos div {
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 3%;
+    background: -webkit-linear-gradient(top, rgba(124, 77, 255, 0.58) 0%, rgba(247, 74, 97, 0.54) 44%, rgba(255, 173, 20, 0.5) 100%);
+    color: black;
+    font-weight: bolder;
+    font-family: "Quicksand";
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    @media (min-width: 992px) {
+      .tipos__cursos div {
+        height: 70vh;
+        width: 20px; } }
+    .tipos__cursos div h4 {
+      font-size: 1.2rem;
+      font-family: "Paytone One";
+      margin-bottom: 10px;
+      margin-top: 10px; }
+  .tipos__cursos div:hover {
+    background-color: #ffa500;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.tipos__cursos div img {
+  width: 40%;
+  text-align: center;
+  margin-top: 10px; }
+  @media (max-width: 768px) {
+    .tipos__cursos div img {
+      display: none; } }
+
+.valores {
+  background-color: #fff8dc;
+  padding-top: 15px;
+  align-content: center;
+  margin: 0; }
+  @media (min-width: 768px) {
+    .valores {
+      display: flex;
+      flex-direction: row; } }
+  .valores h3 {
+    font-family: "Paytone One";
+    font-size: 2rem;
+    align-content: center;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .valores h3 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 3rem; } }
+  .valores .table {
+    margin-top: 10px;
+    background-color: rgba(50, 205, 50, 0.612);
+    padding: 0;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+/* PREGUNTAS */
+.prop__preguntas {
+  background-image: url(../img_webp/questions.webp);
+  /*& button {
+        
+    }*/ }
+  .prop__preguntas span {
+    height: 300px;
+    text-align: center; }
+    @media (max-width: 768px) {
+      .prop__preguntas span {
+        height: 100px; } }
+
+.accordion {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem; }
+
+.card {
+  background-color: cornsilk;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.btn-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black; }
+
+.btn-link:hover {
+  text-decoration: none;
+  color: #8100eb; }
+
+/* RECURSOS ESTUDIANTES */
+.prop__est {
+  background-image: url(../img_webp/students.webp); }
+
+@media (max-width: 768px) {
+  .videos {
+    display: none; } }
+
+.consejos {
+  background-color: #fff8dc;
+  margin: 0; }
+  .consejos .consejos__titulo {
+    font-family: "Paytone One";
+    font-size: 200%;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .consejos .consejos__titulo {
+        font-size: 300%; } }
+  .consejos .box {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .consejos .consejos__box {
+    background: -webkit-linear-gradient(top, rgba(255, 173, 20, 0.5) 0%, rgba(247, 74, 97, 0.54) 56%, rgba(124, 77, 255, 0.58) 100%);
+    height: 50px;
+    width: 50%;
+    margin: 5px;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-content: center;
+    font-weight: bolder;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    @media (min-width: 768px) {
+      .consejos .consejos__box {
+        font-size: 2rem;
+        height: 70px; } }
+    .consejos .consejos__box a {
+      text-decoration: none;
+      color: black; }
+  .consejos .consejos__box:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+  .consejos .consejos__txt {
+    text-align: justify;
+    margin-top: 2rem; }
+    .consejos .consejos__txt h4 {
+      font-weight: bolder;
+      text-align: center; }
+    .consejos .consejos__txt li {
+      list-style: none; }
+    .consejos .consejos__txt p {
+      margin-bottom: 0; }
+
+.videos {
+  background-color: #fff8dc;
+  margin: 0; }
+  .videos h3 {
+    font-family: "Paytone One";
+    text-align: center;
+    font-size: 4rem; }
+
+/* RECURSOS PROF*/
+.prop__prof {
+  background-image: url(../img_webp/teachers.webp); }
+
+/** CONTACTO**/
+.contacto {
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.contacto .button {
+  width: 12rem;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+
+.contacto .input__button {
+  min-height: 2rem;
+  min-width: 4rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: orange;
+  color: black;
+  border: none;
+  border-radius: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.contacto .formulario {
+  font-weight: bold;
+  height: 75vh;
+  width: 60%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.contacto .formulario .mensaje {
+  padding: 2rem;
+  width: 1rem;
+  margin: 1rem; }
+
+.contacto .formulario h3 {
+  font-size: 3rem; }
+
+.placement_test {
+  display: none; }
+
+.consejos button {
+  background-color: orange;
+  color: black;
+  border: none;
+  border-radius: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 15rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-right: 11rem;
+  margin-left: 3rem;
+  transition: transform 1s; }
