@@ -453,3 +453,27 @@ footer div span a:hover {
 
 .contacto .formulario h3 {
   font-size: 3rem; }
+
+.placement_test {
+  display: none; }
+
+.consejos button {
+  background-color: orange;
+  color: black;
+  border: none;
+  border-radius: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 15rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-right: 11rem;
+  margin-left: 3rem;
+  transition: transform 1s; }
