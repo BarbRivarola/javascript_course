@@ -77,7 +77,7 @@
               <div>A. Sorry, I did that</div>
               <div>B. It's the same place</div>  
               <div>C. Only for half an hour</div>
-              <input id="answer01" type="text" placeholder="Type A, B or C.">
+              <input id="answer01" type="text" placeholder="Type A, B or C." onchange="pasarUpper()">
               <!-- <button onclick="hidePrevious(), showNext()">Next</button> -->
           </li>
 
@@ -113,10 +113,11 @@
           <div>A. I'm too tired.</div>
           <div>B. It''s very good.</div>
           <div>C. Not at all."</div>
+          <input id="answer05" type="text" placeholder="Type A, B or C.">
         </li>
       </ol>
 
-      <button type="submit"> Submit </button>
+      <button type="submit" id="submit"> Submit </button>
           </div>
           <!-- <div class="box row">
             <div class="consejos__box col-md-3">
