@@ -129,3 +129,4 @@ function verListaCarrito() {
     }
     console.log("Son " + listaDeCarrito.length + " cursos\n  Total de la compra: $" + total);
 }
+
