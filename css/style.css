@@ -133,35 +133,6 @@
   .prop button:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
-.features {
-  background-color: #fff8dc;
-  margin: 0; }
-  .features p {
-    text-align: justify; }
-  @media (min-width: 768px) {
-    .features p {
-      font-size: 2rem; }
-    .features h3 {
-      font-size: 2.5rem; } }
-  .features .img1, .features .img2, .features .img3 {
-    align-content: center;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .features img {
-    width: 250px;
-    height: 150px;
-    border-radius: 15%;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-    @media (min-width: 768px) {
-      .features img {
-        width: 320px;
-        height: 250px; } }
-  .features .features__01 .features__01__text h3, .features .features__02 .features__02__text h3, .features .features__03 .features__03__text h3 {
-    text-align: center;
-    margin-top: 10px;
-    font-weight: bolder; }
-
 footer {
   background-color: #6b35ff; }
   footer .contactame {
@@ -227,16 +198,6 @@ footer div span a:hover {
   color: orange; }
 
 /* PROPUESTAS */
-.prop__propuestas {
-  background-image: url(../img_webp/proposals.webp); }
-  .prop__propuestas button {
-    width: 8rem; }
-    @media (min-width: 768px) {
-      .prop__propuestas button {
-        width: 12.5rem; } }
-  .prop__propuestas span {
-    margin-left: 20px; }
-
 .tipos__cursos {
   background-color: #fff8dc;
   margin: 0; }
@@ -263,76 +224,6 @@ footer div span a:hover {
   .tipos__cursos div:hover {
     background-color: #ffa500;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-
-.tipos__cursos div img {
-  width: 40%;
-  text-align: center;
-  margin-top: 10px; }
-  @media (max-width: 768px) {
-    .tipos__cursos div img {
-      display: none; } }
-
-.valores {
-  background-color: #fff8dc;
-  padding-top: 15px;
-  align-content: center;
-  margin: 0; }
-  @media (min-width: 768px) {
-    .valores {
-      display: flex;
-      flex-direction: row; } }
-  .valores h3 {
-    font-family: "Paytone One";
-    font-size: 2rem;
-    align-content: center;
-    text-align: center; }
-    @media (min-width: 768px) {
-      .valores h3 {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        text-align: center;
-        font-size: 3rem; } }
-  .valores .table {
-    margin-top: 10px;
-    background-color: rgba(50, 205, 50, 0.612);
-    padding: 0;
-    font-size: larger;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-
-/* PREGUNTAS */
-.prop__preguntas {
-  background-image: url(../img_webp/questions.webp);
-  /*& button {
-        
-    }*/ }
-  .prop__preguntas span {
-    height: 300px;
-    text-align: center; }
-    @media (max-width: 768px) {
-      .prop__preguntas span {
-        height: 100px; } }
-
-.accordion {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1.2rem; }
-
-.card {
-  background-color: cornsilk;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.btn-link {
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: black; }
-
-.btn-link:hover {
-  text-decoration: none;
-  color: #8100eb; }
 
 /* RECURSOS ESTUDIANTES */
 .prop__est {
@@ -389,71 +280,6 @@ footer div span a:hover {
     .consejos .consejos__txt p {
       margin-bottom: 0; }
 
-.videos {
-  background-color: #fff8dc;
-  margin: 0; }
-  .videos h3 {
-    font-family: "Paytone One";
-    text-align: center;
-    font-size: 4rem; }
-
-/* RECURSOS PROF*/
-.prop__prof {
-  background-image: url(../img_webp/teachers.webp); }
-
-/** CONTACTO**/
-.contacto {
-  background-color: white;
-  height: 100vh;
-  width: 100%;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 5rem 3rem;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-evenly;
-  align-items: center; }
-
-.contacto .button {
-  width: 12rem;
-  padding: 1.5rem;
-  margin: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center; }
-
-.contacto .input__button {
-  min-height: 2rem;
-  min-width: 4rem;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: orange;
-  color: black;
-  border: none;
-  border-radius: 1rem;
-  font-family: 'Quicksand', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.contacto .formulario {
-  font-weight: bold;
-  height: 75vh;
-  width: 60%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  align-items: center; }
-
-.contacto .formulario .mensaje {
-  padding: 2rem;
-  width: 1rem;
-  margin: 1rem; }
-
-.contacto .formulario h3 {
-  font-size: 3rem; }
-
 .placement_test {
   display: none; }
 
@@ -477,3 +303,21 @@ footer div span a:hover {
   margin-right: 11rem;
   margin-left: 3rem;
   transition: transform 1s; }
+
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s; }
+
+.active-slide {
+  opacity: 1;
+  z-index: 2; }
+
+.quiz-container {
+  position: relative;
+  height: 200px;
+  margin-top: 40px; }
