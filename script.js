@@ -1,3 +1,6 @@
+$(window).on('load', function() {
+    console.log("Estamos listos para arrancar");
+});
 (function(){//funciones
     function buildQuiz(){
         const output = [];
@@ -143,57 +146,50 @@
     nextButton.addEventListener("click", showNextSlide);
     
     }) ();
+
+
 //Cursos disponibles
 
+const cursos =[{id:1, nivel:"elemental", tema:"tecnologia", horas:10, precio:8500, cantidad:1},
+{id:2, nivel:"principiante", tema:"ingles general", horas:36, precio:12000, cantidad:1},
+{id:3, nivel:"avanzado", tema:"clinica de pronunciacion", horas:10, precio:8500, cantidad:1},
+{id:4, nivel:"intermedio", tema:"entrevista de trabajo", horas:4, precio:5000, cantidad:1},
+];
 
-class Cursos {
+//AGREGO AL DOM
 
-    constructor(id,horas,nivel,tema,precio,cantidad){
+let listaDeCarrito = [];
 
-        this.id=id;
-
-        this.horas=horas;
-
-        this.nivel=nivel;
-
-        this.tema=tema;
-
-        this.precio=precio;
-
-        this.cantidad=cantidad;
-
-    }
-
+for (const curso of cursos){
+    $(".cursosActivos").append(`<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Curso ${curso.tema}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Nivel ${curso.nivel}</h6>
+      <p class="card-text">Este curso tiene una duracion de ${curso.horas} horas y vale $${curso.precio}</p>
+      <button id="agregar${curso.id}">Agregar al carrito</button>
+      <button id="ver${curso.id}">Ver carrito </button>
+    </div>
+  </div>`)
 }
 
+// $(`#agregar${curso.id}`).on('click', () => {
+//     listaDeCarrito.push(cursos[curso.id-1]);
+// });
+
+// $(`#ver${curso.id}`).on('click', () => {
+//     let total = 0;
+//     for (elemento of listaDeCarrito) {
+//         console.log("ID: " + elemento.id + " Producto: " + elemento.producto);
+//         total += elemento.precio;
+//     }
+//     console.log("Son " + listaDeCarrito.length + " cursos\n  Total de la compra: $" + total);
+// });
+
+let visibilidad = true;
+$("#mostrarOcultar").on('click', () => {
+    visibilidad ? $(".cursosActivos").css({ display: "none" }) : $(".cursosActivos").css({ display: "inline-block" });
+    visibilidad = !visibilidad;
+});
 
 
-const curso1= new Cursos(1,10,"elemental","profesional tecnologia",8500,1);
-const curso2= new Cursos(2, 36, "principiante", "ingles general", 12000, 1);
-const curso3= new Cursos(3, 10, "avanzado", "clinica de pronunciacion", 8500, 1);
-const curso4= new Cursos(4, 4, "intermedio", "entrevista de trabajo", 5000, 1);
-
-const listaDeCarrito = [];
-
-function agregarAListaCarrito1() {
-    listaDeCarrito.push(curso1);
-}
-function agregarAListaCarrito2() {
-    listaDeCarrito.push(curso2);
-
-}function agregarAListaCarrito3() {
-    listaDeCarrito.push(curso3);
-
-}function agregarAListaCarrito4() {
-    listaDeCarrito.push(curso4);
-}
-
-function verListaCarrito() {
-    let total = 0;
-    for (elemento of listaDeCarrito) {
-        console.log("ID: " + elemento.id + " Producto: " + elemento.producto);
-        total += elemento.precio;
-    }
-    console.log("Son " + listaDeCarrito.length + " cursos\n  Total de la compra: $" + total);
-}
 
