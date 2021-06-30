@@ -1,7 +1,9 @@
 $(window).on('load', function() {
     console.log("Estamos listos para arrancar");
 });
-(function(){//funciones
+
+(function(){
+    //funciones
     function buildQuiz(){
         const output = [];
     
@@ -10,7 +12,7 @@ $(window).on('load', function() {
                 const answers = [];
                 for (letter in currentQuestion.answers){
                     answers.push(
-                        `<label>
+                        `<label style="display:flex">
                 <input type="radio" name="question${questionNumber}" value="${letter}">
                 ${letter} :
                 ${currentQuestion.answers[letter]}
@@ -46,7 +48,24 @@ $(window).on('load', function() {
                 }
         });
     
-        resultsContainer.innerHTML=`${numCorrect} out of ${myQuestions.length}`;
+        //resultsContainer.innerHTML=`${numCorrect} out of ${myQuestions.length}`, 
+        if(numCorrect==myQuestions.length){
+            resultsContainer.innerHTML=`Congratulations! Your English level is Advanced`;
+        }
+        else if(numCorrect<=myQuestions.length-1){
+            resultsContainer.innerHTML=`Congratulations! Your English level is Upper-intermediate`;
+        }
+        else if(numCorrect<=myQuestions.length-4){
+            resultsContainer.innerHTML=`Good job! Your English level is Intermediate.`
+        }
+        else if(numCorrect<=myQuestions.length-6){
+            resultsContainer.innerHTML=`Good job! Your English level is Elementary.`
+        }
+        else{
+            `Your English level is Beginner.`
+        };
+
+        
     };
     
     function showSlide(n) {
@@ -75,6 +94,10 @@ $(window).on('load', function() {
     
     function showPreviousSlide(){
         showSlide(currentSlide-1);
+    };
+
+    function showCourses(){
+        document.getElementById("mostrarOcultar").style.display="inline-block";
     }
     
     // Variables
@@ -127,10 +150,56 @@ $(window).on('load', function() {
                 c:"Not at all",
             },
             correctAnswer: "a"
+        },
+        {
+            question:"Hey, there! Long time no see!",
+            answers:{
+                a:"I'm sorry.",
+                b:"Hi! How have you been?",
+                c:"Yes, I see you.",
+            },
+            correctAnswer: "b"
+        },
+        {
+            question:"Could you please close the window?",
+            answers:{
+                a:"Of course.",
+                b:"Let me open it for you.",
+                c:"Yes, I could.",
+            },
+            correctAnswer: "a"
+        },
+        {
+            question:"What time is the class tomorrow?",
+            answers:{
+                a:"The classes are very good.",
+                b:"I arrived late.",
+                c:"It's supposed to start at 8 but the teacher is always late.",
+            },
+            correctAnswer: "c"
+        },
+        {
+            question:"I brought you a gift.",
+            answers:{
+                a:"Thanks, come again.",
+                b:"Oh, you should't have. Thank you!.",
+                c:"I got it from my mom.",
+            },
+            correctAnswer: "b"
+        },
+        {
+            question:"Javascript is too difficult.",
+            answers:{
+                a:"You just need to practise more.",
+                b:"It's impossible.",
+                c:"Could agree more.",
+            },
+            correctAnswer: "a"
         }
     ];
     // display quiz right away
     buildQuiz();
+    
     
     //paginacion
     const previousButton = document.getElementById("previous");
@@ -142,6 +211,7 @@ $(window).on('load', function() {
     showSlide(currentSlide);
     // Event listener
     submitButton.addEventListener('click', showResults);
+    submitButton.addEventListener('click', showCourses);
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
     
@@ -172,24 +242,9 @@ for (const curso of cursos){
   </div>`)
 }
 
-// $(`#agregar${curso.id}`).on('click', () => {
-//     listaDeCarrito.push(cursos[curso.id-1]);
-// });
-
-// $(`#ver${curso.id}`).on('click', () => {
-//     let total = 0;
-//     for (elemento of listaDeCarrito) {
-//         console.log("ID: " + elemento.id + " Producto: " + elemento.producto);
-//         total += elemento.precio;
-//     }
-//     console.log("Son " + listaDeCarrito.length + " cursos\n  Total de la compra: $" + total);
-// });
 
 let visibilidad = true;
-$("#mostrarOcultar").on('click', () => {
-    visibilidad ? $(".cursosActivos").css({ display: "none" }) : $(".cursosActivos").css({ display: "inline-block" });
-    visibilidad = !visibilidad;
-});
-
-
-
+        $("#mostrarOcultar").on('click', () => {
+            visibilidad ? $(".cursosActivos").css({ display: "none" }) : $(".cursosActivos").css({ display: "inline-block" });
+            visibilidad = !visibilidad;
+        });
