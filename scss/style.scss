@@ -3,6 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Chango&family=Paytone+One&family=Quicksand:wght@300&display=swap');
 /*-- font-family: 'Quicksand', sans-serif; --*/
 
+
+/*dado*/
+@import "../scss/dado";
+
+/*ruleta*/
+@import "../scss/ruleta" ;
+
 @mixin flex {display: flex;
     align-items: center;
     justify-content: center;
@@ -112,6 +119,8 @@ $box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     background-image: url(../img_webp/index.webp);
     background-size: 100%;
     background-repeat:no-repeat;
+    @include flex;
+    flex-direction: column;
     @media (min-width: 768px) {
         height: 50vh;
     }
@@ -180,15 +189,19 @@ $box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 footer {
     background-color:#6b35ff ;
     & .contactame {
-
         @include flex;
         flex-direction: column;
         font-size: 4rem;
         font-family:'Paytone One', sans-serif;
         padding: 4.5rem;
-        height: 12rem;
-        width: 100%;
+        height: 50vh;
+        width:100%;
+        & .titulo__contactame{
+            padding: 15px 15px;
+        }
+        
     }
+    
     & img {
         height:100px;
         border-radius: 100%;
@@ -196,6 +209,9 @@ footer {
     }
 }
 
+.estiloInput{
+    padding: 10px 10px;
+}
 
 .contactame button {
     height: 3rem;
@@ -209,15 +225,9 @@ footer {
     @include flex;
 }
 
-.contactame button a {
-    text-decoration: none;
-    color:black;
-}
 
 
-footer .contactame a {
-    text-decoration: none;
-}
+
 footer.contactame a button {
     font-size: 0.5rem;
     background-color: orange;
@@ -232,19 +242,7 @@ footer .contactame button:hover {
     box-shadow: $box-shadow;
 }
 
-footer div span {
-    font-family:'Quicksand', sans-serif;
-    color:cornsilk;   
-}
 
-footer div span a {
-    text-decoration: none;
-    color:cornsilk;
-}
-
-footer div span a:hover {
-    color:orange
-}
 
 /* PROPUESTAS */
 
@@ -253,6 +251,7 @@ footer div span a:hover {
 .tipos__cursos {
     background-color: $color-fondo;
     margin:0;
+    padding-bottom: 100px;
     & div {
         text-align: center;
         margin-left: 5%;
@@ -264,10 +263,9 @@ footer div span a:hover {
         border-radius: 5px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        @media (min-width: 992px) {
+        /*@media (min-width: 992px) {
             height: 70vh;
-            width:20px;
-        }
+            width:20px;*/
         h4 {
             font-size: 1.2rem;
             font-family:$fuente-focus;
@@ -392,313 +390,41 @@ footer div span a:hover {
         font-size: 1.5rem;
     }
 }
-#mostrarOcultar, .cursosActivos{
+/*#mostrarOcultar, .cursosActivos{
     display: none;
-}
-/*ruleta */
-  
-  .mainbox{
-    position: relative;
-    width: 500px;
-    height: 500px;
-  }
-  .mainbox:before{
-    position: absolute;
-    content: '';
-    width: 32px;
-    height: 32px;
-    background: url('https://learndesigntutorial.com/wp-content/uploads/2021/03/arrow-left.png') no-repeat;
-    background-size: 32px;
-    right: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .box{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 50%;
-    border: 10px solid #333;
-    overflow: hidden;
-    transition: all ease 5s;
-  }
-  .span{
-    width: 50%;
-    height: 50%;
-    display: inline-block;
-    position: absolute;
-  }
-  
-  .span1{
-    clip-path: polygon(0 92%, 100% 50%, 0 8%);
-    top: 120px;
-    left: 0;
-    background-color: $color-violeta;
-  }
-  .span2{
-    clip-path: polygon(100% 92%, 0 50%, 100% 8%);
-    top: 120px;
-    right: 0;
-    background-color: $color-naranja;
-  }
-  .span3{
-    clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
-    bottom: 0;
-    left: 120px;
-    background-color:$color-verde;
-  }
-  .span4{
-    clip-path: polygon(50% 100%, 92% 0, 8% 0);
-    top: 0;
-    left: 120px;
-    background-color: rgb(255, 55, 222);
-  }
-  
-  /*EXTRAS*/
-  .box1 .span3 b{
-    transform: translate(-50%, -50%) rotate(-270deg);
-  }
-  .box1 .span1 b,
-  .box2 .span1 b{
-    transform: translate(-50%, -50%) rotate(185deg);
-  }
-  .box2 .span3 b{
-    transform: translate(-50%, -50%) rotate(90deg);
-  }
-  .box1 .span4 b,
-  .box2 .span4 b{
-    transform: translate(-50%, -50%) rotate(-85deg);
-  }
-  
-  
-  .box2{
-    width: 100%;
-    height: 100%;
-    transform: rotate(-135deg);
-  }
-  .span b{
-    width: 65px;
-    height: 65px;
-    line-height: 65px;
-    border-radius: 50%;
-    font-size: 26px;
-    text-align: center;
-    background-color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: inset 0 3px 3px 0 #717171;
-  }
-  .spin{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    background-color:grey;
-    color: #fff;
-    box-shadow: 0 5px 20px #000;
-    font-weight: bold;
-    font-size: 22px;
-    cursor: pointer;
-  }
-  .spin:active{
-    width: 70px;
-    height: 70px;
-    font-size: 20px;
-  }
-  .mainbox.animate:before{
-    animation: animateArrow 0.7s ease infinite; 
-  }
-  @keyframes animateArrow{
-    50%{
-      right: -40px;
-    }
-  }
+}*/
+.modal {
+    background-color:#ffa5009c;
+.modal-dialog{
+    @include flex;
+    
+}}
 
-  /*dado*/
-  
-  #cube .front {
-    transform: 
-      translateZ(100px);
-  }
-  
-  #cube .back {
-    transform: 
-      rotateX(-180deg)
-      translateZ(100px);
-  }
-  
-  #cube .right {
-    transform:
-      rotateY(90deg)
-      translateZ(100px);
-  }
-  
-  #cube .left {
-    transform:
-      rotateY(-90deg)
-      translateZ(100px);
-  }
-  
-  #cube .top {
-    transform:
-      rotateX(90deg)
-      translateZ(100px);
-  }
-  
-  #cube .bottom {
-    transform:
-      rotateX(-90deg)
-      translateZ(100px);
-  }
-  
-  .container-dado {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    margin: 0 auto 40px;
-    border: 1px solid #FFF;
+.modal-backdrop {
+    background-color: transparent;
+}
+
+/* FORMULARIO*/
+.consultas {
+    @include flex;
+    flex-direction: column;
+
+
+}
+.consultas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    padding-bottom: 50px;
+}
+.contacto{
+    width: 500px;
     
-    perspective: 1000px;
-    perspective-origin: 50% 100%;
-  }
-  
-  #cube {
-    width: 100%;
-    height: 100%;
-    top: 100px;
-    position: absolute;
-    
-    transform-style: preserve-3d;
-    
-    transition: transform 6s;
-  }
-  
-  #cube:hover {
-    cursor: pointer;
-  }
-  
-  #cube div {
-    background: $color-naranja;
-    display: block;
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border: 2px solid $color-naranja;
-    
-    margin: 0 auto;  
-    
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 500%;
-    text-align: center;
-    padding: 50px 0;
-  }
-  
-  .dot {
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background:$color-violeta;;
-    border-radius: 15px;  
-  }
-  
-  .front .dot1 { top: 85px; left: 85px; }
-  .back .dot1 { top: 45px; left: 45px; }
-  .back .dot2 { top: 125px; left: 125px; }
-  .right .dot1 { top: 45px; left: 45px; }
-  .right .dot2 { top: 85px; left: 85px; }
-  .right .dot3 { top: 125px; left: 125px; }
-  .left .dot1 { top: 45px; left: 45px; }
-  .left .dot2 { top: 45px; left: 125px; }
-  .left .dot3 { top: 125px; left: 45px; }
-  .left .dot4 { top: 125px; left: 125px; }
-  .top .dot1 { top: 45px; left: 45px; }
-  .top .dot2 { top: 45px; left: 125px; }
-  .top .dot3 { top: 85px; left: 85px; }
-  .top .dot4 { top: 125px; left: 45px; }
-  .top .dot5 { top: 125px; left: 125px; }
-  .bottom .dot1 { top: 45px; left: 45px; }
-  .bottom .dot2 { top: 45px; left: 85px; }
-  .bottom .dot3 { top: 45px; left: 125px; }
-  .bottom .dot4 { top: 125px; left: 45px; }
-  .bottom .dot5 { top: 125px; left: 85px; }
-  .bottom .dot6 { top: 125px; left: 125px; }
-  /*decisor*/
-  body {
-    perspective: 800px;
-  }
-  h1{
-    text-align: center;
-  }
-  #coin {
-    position: relative;
-    margin: 0 auto;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-  }
-  #coin div {
-    width: 100%;
-    height: 100%;
-    -webkit-border-radius: 50%;
-       -moz-border-radius: 50%;
-            border-radius: 50%;
-    -webkit-box-shadow: inset 0 0 45px rgba(255,255,255,.3), 0 12px 20px -10px rgba(0,0,0,.4);
-       -moz-box-shadow: inset 0 0 45px rgba(255,255,255,.3), 0 12px 20px -10px rgba(0,0,0,.4);
-            box-shadow: inset 0 0 45px rgba(255,255,255,.3), 0 12px 20px -10px rgba(0,0,0,.4);
-  }
-  .side-a {
-    background-color: $color-violeta;
-    text-align: center;
-    font-family:sans-serif;
-  }
-  .side-b {
-    background-color: $color-naranja;
-    text-align: center
-  }
-  
-  #coin {
-    transition: -webkit-transform 1s ease-in;
-    transform-style: preserve-3d;
-  }
-  #coin div {
-    position: absolute;
-    backface-visibility: hidden;
-  }
-  .side-a {
-    z-index: 100;
-  }
-  .side-b {
-    transform: rotateY(-180deg);
-  
-  }
-  
-  #coin.heads {
-    animation: flipHeads 3s ease-out forwards;
-    -moz-animation: flipHeads 3s ease-out forwards;
-      -o-animation: flipHeads 3s ease-out forwards;
-         animation: flipHeads 3s ease-out forwards;
-  }
-  #coin.tails {
-    animation: flipTails 3s ease-out forwards;
-    -moz-animation: flipTails 3s ease-out forwards;
-      -o-animation: flipTails 3s ease-out forwards;
-         animation: flipTails 3s ease-out forwards;
-  }
-  
-  @keyframes flipHeads {
-    from { -webkit-transform: rotateY(0); -moz-transform: rotateY(0); transform: rotateY(0); }
-    to { -webkit-transform: rotateY(1800deg); -moz-transform: rotateY(1800deg); transform: rotateY(1800deg); }
-  }
-  @keyframes flipTails {
-    from { -webkit-transform: rotateY(0); -moz-transform: rotateY(0); transform: rotateY(0); }
-    to { -webkit-transform: rotateY(1980deg); -moz-transform: rotateY(1980deg); transform: rotateY(1980deg); }
-  }
-  
-  
+    }
+.titles__text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
